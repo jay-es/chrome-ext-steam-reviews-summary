@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "chrome-ext-steam-reviews-summary",
+  "version": "0.1.0",
+  "description": "",
+  "icons": {
+    "48": "copy-svgrepo-com.png"
+  },
+  "permissions": ["contextMenus"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://store.steampowered.com/app/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
